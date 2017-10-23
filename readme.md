@@ -7,6 +7,6 @@ Lien pour prendre en main [Git](http://jlord.us/git-it/index.html)
 
 TODO LIST :
 -
---> Logger
---> TestFrameWork
---> Banking 
+--> Logger  
+--> TestFrameWork  
+--> Banking   
