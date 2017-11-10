@@ -1,11 +1,11 @@
 package banking;
 
-import java.util.ArrayList;
-
+import java.util.LinkedList;
 public class Banque{
-  ArrayList<Client> clients = new ArrayList<Client>();
 
-  public void ajout_client(String prenom, String name, String age, double premier_depot){
-    
+  LinkedList<Client> clientList = new LinkedList<>();
+
+  public void ajout_client(String prenom, String name, int age, double solde){
+    clientList.add(new Client(prenom,name,age,solde));
   }
 }
