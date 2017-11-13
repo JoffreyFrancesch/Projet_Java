@@ -5,12 +5,14 @@ public class Client{
   private String nom;
   private int age;
   private double solde;
+  private int numero_compte;
 
-  public Client(String prenom, String nom, int age,double solde){
+  public Client(String prenom, String nom, int age,double solde, int numero_compte){
     this.prenom = prenom;
     this.nom = nom;
     this.age = age;
     this.solde = solde;
+    this.numero_compte = numero_compte;
   }
 
   public String getPrenom(){
@@ -29,7 +31,7 @@ public class Client{
     return solde;
   }
 
-  public String info(){
-    return "Voici ce que contient votre compte" + getNom() + getPrenom() + getAge() + getSolde();
+  public int getNumeroCompte(){
+    return numero_compte;
   }
 }
