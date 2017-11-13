@@ -1,4 +1,4 @@
-package logger.src;
+package logger;
 
 public interface Logger
 {
