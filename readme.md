@@ -1,12 +1,40 @@
-READ ME
-=======
+PROJET POO 3A 2017
+==================
 
-Lien pour prendre en main [Git](http://jlord.us/git-it/index.html)
--
-![Git logo](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png "Git Logo")
+Membres de l'équipe :
+---------------------
+- Joffrey Franceschini Classe 34
+- Yannis Belaïd Classe 34
+- Mehdi Soltana Classe 34
 
-TODO LIST :
--
---> Logger  
---> TestFrameWork  
---> Banking   
+Lien du repositories Git :
+------------------------------
+
+Rendez-vous sur [GitHub](https://github.com/JoffreyFrancesch/Projet_Java) pour récupérer les fichiers du projet.
+
+
+Objectifs :
+-----------
+* Ecrire une librairie pour historiser les évènements
+* Ecrire une librairie pour tester du code
+* Utiliser ces deux librairies pour construire un projet simple de gestion de compte en banque
+Scripter le lancement (bash unix) :
+  * de la compilation
+  * du lancement des tests
+  * du lancement du programme de gestion de compte en banque
+
+
+Informations sur le Logger :
+----------------------------
+
+//TODO
+
+Informations sur le TestFrameWork :
+-----------------------------------
+
+//TODO
+
+Informations sur le Banking :
+-----------------------------
+
+//TODO
