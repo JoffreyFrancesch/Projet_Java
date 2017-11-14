@@ -10,15 +10,11 @@ public class Affichage{
   }
 
   public void message_selection(){
-    System.out.println("Que voulez vous faire ?");
-    System.out.println("a.  Creation d'un compte");
-    System.out.println("d.  Faire un dépot");
-    System.out.println("r.  Faire un retrai");
-    System.out.println("h.  Historique de votre compte");
-    System.out.println("c.  Demander un crédit");
-    System.out.println("l.  Liste des prêts");
-    System.out.println("v.  Faire un virement");
-    System.out.println("q.  Quitter");
+    System.out.println("Que voulez vous faire ?\n");
+    System.out.println("1.  Creation d'un compte  |  5.  Demander un crédit");
+    System.out.println("2.  Faire un dépot        |  6.  Liste des prêts");
+    System.out.println("3.  Faire un retrai       |  7.  Faire un virement");
+    System.out.println("4.  Historique            |  8.  Quitter");
     System.out.println("\n");
   }
 }

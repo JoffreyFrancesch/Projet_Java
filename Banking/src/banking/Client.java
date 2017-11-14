@@ -6,13 +6,15 @@ public class Client{
   private int age;
   private double solde;
   private int numero_compte;
+  private int nb_credit;
 
-  public Client(String prenom, String nom, int age,double solde, int numero_compte){
+  public Client(String prenom, String nom, int age,double solde, int nb_credit,int numero_compte){
     this.prenom = prenom;
     this.nom = nom;
     this.age = age;
     this.solde = solde;
     this.numero_compte = numero_compte;
+    this.nb_credit = nb_credit;
   }
 
   public String getPrenom(){
@@ -33,5 +35,8 @@ public class Client{
 
   public int getNumeroCompte(){
     return numero_compte;
+  }
+  public int getNbcredit(){
+    return nb_credit;
   }
 }

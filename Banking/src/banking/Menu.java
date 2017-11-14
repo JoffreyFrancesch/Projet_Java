@@ -7,36 +7,36 @@ public class Menu{
   Scanner scanner = new Scanner(System.in);
 
   public void lancement_menu(){
-    char choix = '\0';
+    int choix;
     message.message_acceuil();
     do {
       message.message_selection();
-      System.out.println("Entrer votre choix");
-      choix = scanner.next().charAt(0);
+      System.out.println("\033[1;31mEntrer votre choix\033[0m");
+      choix = scanner.nextInt();
 
       switch(choix){
-        case 'a' :
+        case 1 :
           operation.creer_compte();
           break;
-        case 'd' :
+        case 2 :
           operation.faire_depot();
           break;
-        case 'r' :
+        case 3 :
           operation.faire_retrait();
           break;
-        case 'h' :
+        case 4 :
           operation.historique();
           break;
-        case 'c' :
+        case 5 :
           operation.demande_pret();
           break;
-        case 'l' :
+        case 6 :
           operation.liste_pret();
           break;
-        case 'v' :
+        case 7 :
           operation.virement();
           break;
-        case 'q' :
+        case 8 :
           System.out.println("Vous avez quitté. Merci de votre visite");
           System.exit(0);
           break;

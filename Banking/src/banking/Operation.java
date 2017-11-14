@@ -10,22 +10,22 @@ public class Operation{
 
   public void creer_compte(){
     String prenom, nom;
-    int age, numero_compte;
+    int age, numero_compte, nb_credit;
     double premier_depot = 0;
     boolean flag = false;//permet de nous sortir de la boucle quand tout est OK
     //Recuperation du prenom
-    System.out.print("Entrer votre Prénom : ");
-    prenom = scanner.nextLine();
+    System.out.println("Entrer votre Prénom : ");
+    prenom = scanner.next();
     //Recuperation du nom
-    System.out.print("Entrer votre Nom : ");
-    nom = scanner.nextLine();
+    System.out.println("Entrer votre Nom : ");
+    nom = scanner.next();
     //Recuperation de l'age
-    System.out.print("Entrer votre Age : ");
+    System.out.println("Entrer votre Age : ");
     age = scanner.nextInt();
 
     do {
       //Recuperation du premier depot
-      System.out.print("Entrer un premier dépot d'argent (>0) : ");
+      System.out.println("Entrer un premier dépot d'argent (>0) : ");
       premier_depot = scanner.nextDouble();
       //Verif depot > 0
       if(premier_depot < 0){
@@ -36,10 +36,11 @@ public class Operation{
     }while(!flag);
     //attribution du numero de compte = a la taille de la liste des clients par exemple le premier client aura numero 0
     numero_compte = banque.getSize();
+    nb_credit = 0;
     //Création du client
-    Client client = new Client(prenom,nom,age,premier_depot, numero_compte);
+    Client client = new Client(prenom,nom,age,premier_depot,nb_credit,numero_compte);
     //Ajout du Client a la liste des clients
-    banque.ajout_client(prenom,nom,age,premier_depot, numero_compte);
+    banque.ajout_client(prenom,nom,age,premier_depot,nb_credit,numero_compte);
     //Aaffichage permet de check si toute les valeurs sont OK
     System.out.println("Merci d'avoir créer un compte Mr."+  client.getNom() + " "+ client.getPrenom() + " Et vous avez "+ client.getAge() + " ans" + " Votre Numero de comtpe est le : " + client.getNumeroCompte() + "\n");
   }
@@ -64,7 +65,7 @@ public class Operation{
     //on modifie le solde
     nouveau_solde = depot + client.getSolde();
     //on met à jour le client
-    banque.setNouveauSolde(numero_compte,nouveau_solde);
+    banque.setNouveauSolde(nouveau_solde,numero_compte);
   }
 
   public void faire_retrait(){
@@ -88,7 +89,7 @@ public class Operation{
     //on modifie le solde
     nouveau_solde = client.getSolde() - retrait;
     //on met à jour le client
-    banque.setNouveauSolde(numero_compte,nouveau_solde);
+    banque.setNouveauSolde(nouveau_solde,numero_compte);
   }
 
   public void historique(){
@@ -137,8 +138,8 @@ public class Operation{
     solde_debit = debit.getSolde() - virement;
     solde_credit = credit.getSolde() + virement;
     //mise à jour des deux soldes des clients dans la liste des clients
-    banque.setNouveauSolde(numero_compte_debit,solde_debit);
-    banque.setNouveauSolde(numero_compte_credit,solde_credit);
+    banque.setNouveauSolde(solde_debit, numero_compte_debit);
+    banque.setNouveauSolde(solde_credit, numero_compte_credit);
   }
 
 }
