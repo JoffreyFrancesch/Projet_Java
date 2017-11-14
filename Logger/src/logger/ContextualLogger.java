@@ -26,21 +26,21 @@ public class ContextualLogger implements Logger {
 	public void debug(String category, String message) {
 		String date = LocalDateTime.now().format(FORMATTER);
 
-		delegate.debug("[DEBUG]["+ category + "] "+ date + " " + callerClass + " " + message);
+		delegate.debug("[DEBUG]["+ category + "] ", date + " " + callerClass + " " + message);
 	}
 
 	@Override
 	public void info(String category, String message) {
 		String date = LocalDateTime.now().format(FORMATTER);
 
-		delegate.info("[INFO]["+ category + "] "+ date + " " + callerClass + " " + message);
+		delegate.info("[INFO]["+ category + "] ", date + " " + callerClass + " " + message);
 	}
 
 	@Override
 	public void error(String category, String message) {
 		String date = LocalDateTime.now().format(FORMATTER);
 
-		delegate.error("[ERROR]["+ category + "] "+ date + " " + callerClass + " " + message);
+		delegate.error("[ERROR]["+ category + "] ", date + " " + callerClass + " " + message);
 	}
 
 }

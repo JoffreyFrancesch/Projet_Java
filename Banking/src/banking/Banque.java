@@ -17,7 +17,7 @@ public class Banque{
     return clientList.get(numero_compte);
   }
 
-  public void setNouveauSolde(double nouveau_solde, int numero_compte){
-    clientList.set(numero_compte, Client(prenom,nom,age,nouveau_solde,nb_credit,numero_compte));
+  public void setClient(int numero_compte, Client client){
+    clientList.set(numero_compte, client);
   }
 }

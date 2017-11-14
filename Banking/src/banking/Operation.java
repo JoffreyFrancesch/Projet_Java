@@ -42,7 +42,7 @@ public class Operation{
     //Ajout du Client a la liste des clients
     banque.ajout_client(prenom,nom,age,premier_depot,nb_credit,numero_compte);
     //Aaffichage permet de check si toute les valeurs sont OK
-    System.out.println("Merci d'avoir créer un compte Mr."+  client.getNom() + " "+ client.getPrenom() + " Et vous avez "+ client.getAge() + " ans" + " Votre Numero de comtpe est le : " + client.getNumeroCompte() + "\n");
+    System.out.println("Merci d'avoir créer un compte Mr."+  client.getNom().toUpperCase() + " "+ client.getPrenom() + "\nVotre Numero de comtpe est le : " + client.getNumeroCompte() + "\n" + "Il y a pour l'instant " + client.getSolde() + "€\n");
   }
 
   public void faire_depot(){
@@ -54,18 +54,11 @@ public class Operation{
     //recuperation du client dans la listes de des clients
     Client client = banque.getClient(numero_compte);
     //recuperation du dépot qu'on veux faire
-    System.out.println("Votre solde est de " + client.getSolde() + ". Combien voulez vous rajouter sur votre compte ? ");
+    System.out.println("Mr."+ client.getNom().toUpperCase()+" " +client.getPrenom() + " Votre solde est de " + client.getSolde() + "€ Combien voulez vous rajouter sur votre compte ? ");
     depot = scanner.nextDouble();
-    //test si la valeur nest pas négative
-    if (depot < 0){
-      //on redemande une nouvelle valeur si < 0
-      System.out.println("Vous devez rentrer un valeur positive\n Nouvelle valeur ? ");
-      depot = scanner.nextDouble();
-    }
-    //on modifie le solde
-    nouveau_solde = depot + client.getSolde();
-    //on met à jour le client
-    banque.setNouveauSolde(nouveau_solde,numero_compte);
+    client.depot(depot);
+    banque.setClient(numero_compte,client);
+
   }
 
   public void faire_retrait(){
@@ -77,19 +70,10 @@ public class Operation{
     //recuperation du client dans la listes de des clients
     Client client = banque.getClient(numero_compte);
     //recuperation du montant du retrait
-    System.out.println("Votre solde est de " + client.getSolde() + ". Combien voulez vous retirer sur votre compte ? ");
+    System.out.println("Mr."+ client.getNom().toUpperCase()+" "+client.getPrenom() + " Votre solde est de " + client.getSolde() + "€ Combien voulez vous retirer sur votre compte ? ");
     retrait = scanner.nextDouble();
-    //test si la valeur est superieur au solde
-    if(retrait > client.getSolde()){
-      //on redemande la valeur
-      System.out.println("Vous n'avez pas le droit de retirer plus que vous n'avez");
-      System.out.println("Veuilez rentrer une autre valeur ");
-      retrait = scanner.nextDouble();
-    }
-    //on modifie le solde
-    nouveau_solde = client.getSolde() - retrait;
-    //on met à jour le client
-    banque.setNouveauSolde(nouveau_solde,numero_compte);
+    client.retrait(retrait);
+    banque.setClient(numero_compte,client);
   }
 
   public void historique(){
@@ -100,7 +84,7 @@ public class Operation{
     //on sort le client de la liste
     Client client = banque.getClient(numero_compte);
     //on affiche les informations
-    System.out.println("Bonjour Mr."+  client.getNom() + " "+ client.getPrenom() + "Vous avez : "+ client.getSolde()+ "€ sur votre compte\n");
+    System.out.println("Bonjour Mr."+  client.getNom() + "  "+ client.getPrenom() + "\nVous avez : "+ client.getSolde()+ "€ sur votre compte\n");
   }
 
   public void demande_pret(){
@@ -109,7 +93,7 @@ public class Operation{
 
   public void liste_pret(){
     //Todo
-
+    
   }
 
   public void virement(){
@@ -138,8 +122,10 @@ public class Operation{
     solde_debit = debit.getSolde() - virement;
     solde_credit = credit.getSolde() + virement;
     //mise à jour des deux soldes des clients dans la liste des clients
-    banque.setNouveauSolde(solde_debit, numero_compte_debit);
-    banque.setNouveauSolde(solde_credit, numero_compte_credit);
+    debit.setSolde(solde_debit);
+    credit.setSolde(solde_credit);
+    banque.setClient(numero_compte_debit,debit);
+    banque.setClient(numero_compte_credit,credit);
   }
 
 }
