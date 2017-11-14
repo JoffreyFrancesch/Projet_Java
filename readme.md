@@ -38,3 +38,14 @@ Informations sur le Banking :
 -----------------------------
 
 //TODO
+
+TODO LIST :
+-----------
+* Partie Banking :
+Implementer les le taux des prêt , la demande de prêt et l'affichage des prêt en cours.
+
+* Partie Logger :
+Voir si le code fonctionne
+
+* Partie TestFrameWork :
+ALL...
