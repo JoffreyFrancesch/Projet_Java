@@ -82,26 +82,25 @@ TODO LIST :
 -----------
 * Partie Banking :
 
-
-- [x] Creer Compte
-- [x] Dépot
-- [x] Retrait
-- [x] Virement
-- [x] Historique du compte
-- [x] Demande crédit
-- [x] Historique de crédit
-- [ ] Remboursement crédit
-- [x] Quitter
+  - [x] Creer Compte
+  - [x] Dépot
+  - [x] Retrait
+  - [x] Virement
+  - [x] Historique du compte
+  - [x] Demande crédit
+  - [x] Historique de crédit
+  - [ ] Remboursement crédit
+  - [x] Quitter
 
 * Partie Logger :
 
+  - [x] Logger.java
+  - [x] LoggerFactory.java
+  - [x] ConsoleLogger.java
+  - [x] CompositeLogger.java
+  - [x] ContextualLogger.java
+  - [x] FileLogger.java
 
-- [x] Logger.java
-- [x] LoggerFactory.java
-- [x] ConsoleLogger.java
-- [x] CompositeLogger.java
-- [x] ContextualLogger.java
-- [x] FileLogger.java
 
 * Partie TestFrameWork :
 ALL...
