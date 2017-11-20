@@ -18,6 +18,7 @@ Objectifs :
 * Ecrire une librairie pour historiser les évènements
 * Ecrire une librairie pour tester du code
 * Utiliser ces deux librairies pour construire un projet simple de gestion de compte en banque
+
 Scripter le lancement (bash unix) :
   * de la compilation
   * du lancement des tests
