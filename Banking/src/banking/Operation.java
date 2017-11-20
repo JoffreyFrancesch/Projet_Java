@@ -10,7 +10,7 @@ public class Operation{
   public void creer_compte(){
     String prenom, nom;
     int age, numero_compte, nb_credit;
-    double premier_depot = 0;
+    double premier_depot;
     boolean flag = false;//permet de nous sortir de la boucle quand tout est OK
     //Recuperation du prenom
     System.out.println("Entrer votre Prénom : ");
@@ -92,7 +92,7 @@ public class Operation{
     System.out.println("Veuillez selectioner un compte pour faire un creidt\n Numero de compte :");
     numero_compte = scanner.nextInt();
     Client client = banque.getClient(numero_compte);
-    if(client.getNbcredit() <= 2){
+    if(client.getNbcredit() < 2){
     System.out.println("Veuillez entrer le nom du credit :");
     nom_credit = scanner.next();
     System.out.println("Veuillez entrer un taux : ");
@@ -125,21 +125,21 @@ public class Operation{
     client.afficherPret();
   }
 
-  public void remboursementPret(){
-    int numero_compte, numero_credit;
-    double montant;
-    System.out.println("Quel numéro de compte voulez vous voir ? ");
-    numero_compte = scanner.nextInt();
-    Client client = banque.getClient(numero_compte);
-    System.out.println("Veuiller entrer le numero de credit a rembourser");
-    numero_credit = scanner.nextInt();
-    Credit credit = client.getCredit(numero_credit);
-    System.out.println("Veuiller entrer le montant que vous voulez rembourser :");
-    montant = scanner.nextDouble();
-    credit.remboursement(montant);
-    client.setSolde(-montant);
-    client.removeCredit(numero_credit);
-  }
+  // public void remboursementPret(){
+  //   int numero_compte, numero_credit;
+  //   double montant;
+  //   System.out.println("Quel numéro de compte voulez vous voir ? ");
+  //   numero_compte = scanner.nextInt();
+  //   Client client = banque.getClient(numero_compte);
+  //   System.out.println("Veuiller entrer le numero de credit a rembourser");
+  //   numero_credit = scanner.nextInt();
+  //   Credit credit = client.getCredit(numero_credit);
+  //   System.out.println("Veuiller entrer le montant que vous voulez rembourser :");
+  //   montant = scanner.nextDouble();
+  //   credit.remboursement(montant);
+  //   client.setSolde(-montant);
+  //   client.removeCredit(numero_credit);
+  // }
 
   public void virement(){
     int numero_compte_debit, numero_compte_credit;
