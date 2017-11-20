@@ -68,7 +68,9 @@ public class Client{
   public void addCredit(String nom_credit,double taux, int duree, double montant){
     double montant_final;
     montant_final = ((montant * ((taux/100)/12))/(1 - Math.pow(1+((taux/100)/12),-(duree*12))))*(duree*12);
-    creditList.add(new Credit(nom_credit,taux,duree,montant_final,0));
+    int numero_credit;
+    numero_credit = creditList.size();
+    creditList.add(new Credit(nom_credit,taux,duree,montant_final,0,numero_credit));
   }
 
   public Credit getCredit(int numero_credit){
@@ -80,18 +82,12 @@ public class Client{
       System.out.println("Vous n'avez aucun crédit en cours");
     } else {
       for (Credit credit : creditList){
-        System.out.println("Nom du credit : " + credit.nom_credit + "\nDurée : " + credit.duree + "\n Montant & Taux : " + credit.montant_a_rembourse + "€ à " + credit.taux +"%\n" + "Et vous avez rembourser :" + credit.montant_en_cours_rembourse + "€\n");
+        System.out.println("Numéro credit : " + credit.numero_credit + "\nNom du credit : " +  credit.nom_credit + "\nDurée : " + credit.duree + "\nMontant & Taux : " + credit.montant_a_rembourse + "€ à " + credit.taux +"%\n" + "Et vous avez rembourser :" + credit.montant_en_cours_rembourse + "€\n");
       }
     }
   }
 
-  // public void removeCredit(int numero_credit){
-  //   Credit credit = creditList.get(numero_credit);
-  //   if(credit.remboursementFini()){
-  //     creditList.remove(numero_credit);
-  //   } else {
-  //     System.out.println("Vous n'avez pas fini de rembourser votre credit. Il manque : "+ (credit.montant_a_rembourse - credit.montant_en_cours_rembourse) + "€\n");
-  //   }
-  // }
-
+  public Credit remonvecredit(int numero_credit){
+    return creditList.remove(numero_credit);
+  }
 }

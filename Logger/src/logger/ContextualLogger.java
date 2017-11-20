@@ -1,7 +1,7 @@
 package logger;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ContextualLogger implements Logger {
 

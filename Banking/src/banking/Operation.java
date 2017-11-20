@@ -125,21 +125,22 @@ public class Operation{
     client.afficherPret();
   }
 
-  // public void remboursementPret(){
-  //   int numero_compte, numero_credit;
-  //   double montant;
-  //   System.out.println("Quel numéro de compte voulez vous voir ? ");
-  //   numero_compte = scanner.nextInt();
-  //   Client client = banque.getClient(numero_compte);
-  //   System.out.println("Veuiller entrer le numero de credit a rembourser");
-  //   numero_credit = scanner.nextInt();
-  //   Credit credit = client.getCredit(numero_credit);
-  //   System.out.println("Veuiller entrer le montant que vous voulez rembourser :");
-  //   montant = scanner.nextDouble();
-  //   credit.remboursement(montant);
-  //   client.setSolde(-montant);
-  //   client.removeCredit(numero_credit);
-  // }
+  public void remboursementPret(){
+    int numero_compte, numero_credit;
+    double montant;
+    System.out.println("Quel numéro de compte voulez vous voir ? ");
+    numero_compte = scanner.nextInt();
+    Client client = banque.getClient(numero_compte);
+    System.out.println("Veuiller entrer le numero de credit a rembourser");
+    numero_credit = scanner.nextInt();
+    Credit credit = client.getCredit(numero_credit);
+    System.out.println("Veuiller entrer le montant que vous voulez rembourser :");
+    montant = scanner.nextDouble();
+    if(credit.remboursement(montant)){
+      client.remonvecredit(numero_credit);
+    }
+
+  }
 
   public void virement(){
     int numero_compte_debit, numero_compte_credit;
