@@ -14,20 +14,10 @@ public class FileLogger implements Logger{
 
 		public FileLogger(String pathAsString){
 			path = Paths.get(pathAsString).toAbsolutePath();
-			System.out.println("Log in: " + path);
+			System.out.println(path);
 
 		}
 
-		// @Override
-		// public void log(String message) {
-	  //       try {
-	  //           Files.write(path, (message + "\n").getBytes(), APPEND, CREATE);
-	  //       } catch (IOException e) {
-	  //           throw new RuntimeException("Cannot write log message to file [" + path + "]", e);
-	  //       }
-	  //   }
-
-		@Override
 		public void info(String category, String message) {
 					try {
 							Files.write(path, (category + " " + message + "\n").getBytes(), APPEND, CREATE);
@@ -36,7 +26,6 @@ public class FileLogger implements Logger{
 					}
 			}
 
-		@Override
 		public void debug(String category, String message) {
 					try {
 							Files.write(path, (category + " " + message + "\n").getBytes(), APPEND, CREATE);
@@ -45,7 +34,6 @@ public class FileLogger implements Logger{
 					}
 			}
 
-		@Override
 		public void error(String category, String message) {
 					try {
 							Files.write(path, (category + " " + message + "\n").getBytes(), APPEND, CREATE);

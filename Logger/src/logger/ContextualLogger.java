@@ -5,42 +5,26 @@ import java.time.format.DateTimeFormatter;
 
 public class ContextualLogger implements Logger {
 
-	private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ISO_DATE;
+	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("YYYY-MM-dd\tHH:mm:ss.SSS");
 
-	private final Logger delegate;
-	private final String callerClass;
+	private Logger delegateLogger;
+	private String callerClass;
 
-	public ContextualLogger(Logger paramDelegate, String callerClass) {
-		delegate = paramDelegate;
-		this.callerClass = callerClass;
+	public ContextualLogger(Logger logger, String name) {
+		this.delegateLogger = logger;
+		this.callerClass = name;
 	}
 
-	// @Override
-	// public void log(String message) {
-	// 	String date = LocalDateTime.now().format(FORMATTER);
-  //
-	// 	delegate.log(date + " " + callerClass + " " + message);
-	// }
-
-	@Override
 	public void debug(String category, String message) {
-		String date = LocalDateTime.now().format(FORMATTER);
-
-		delegate.debug("[DEBUG]["+ category + "] ", date + " " + callerClass + " " + message);
+		delegateLogger.debug(category, DATE_FORMAT.format( new Date()) + "\t" + callerClass + "\t" + message);
 	}
 
-	@Override
 	public void info(String category, String message) {
-		String date = LocalDateTime.now().format(FORMATTER);
-
-		delegate.info("[INFO]["+ category + "] ", date + " " + callerClass + " " + message);
+		delegateLogger.info(category, DATE_FORMAT.format( new Date()) + "\t" + callerClass + "\t" + message);
 	}
 
-	@Override
 	public void error(String category, String message) {
-		String date = LocalDateTime.now().format(FORMATTER);
-
-		delegate.error("[ERROR]["+ category + "] ", date + " " + callerClass + " " + message);
+		delegateLogger.error(category, DATE_FORMAT.format( new Date()) + "\t" + callerClass + "\t" + message);
 	}
 
 }
