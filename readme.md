@@ -28,11 +28,16 @@ Organisation des fichiers :
 ---------------------------
 * Logger
   * src
-    * .java
+    - Logger.java
+    - LoggerFactory.java
+    - ConsoleLogger.java
+    - CompositeLogger.java
+    - ContextualLogger.java
+    - FileLogger.java
   * bin
     * .class
 
-    
+
 * TestFrameWork
   * src
     * .java
@@ -76,10 +81,27 @@ Informations sur le Banking :
 TODO LIST :
 -----------
 * Partie Banking :
-Implementer les le taux des prêt , la demande de prêt et l'affichage des prêt en cours.
+
+
+- [x] Creer Compte
+- [x] Dépot
+- [x] Retrait
+- [x] Virement
+- [x] Historique du compte
+- [x] Demande crédit
+- [x] Historique de crédit
+- [ ] Remboursement crédit
+- [x] Quitter
 
 * Partie Logger :
-Voir si le code fonctionne
+
+
+- [x] Logger.java
+- [x] LoggerFactory.java
+- [x] ConsoleLogger.java
+- [x] CompositeLogger.java
+- [x] ContextualLogger.java
+- [x] FileLogger.java
 
 * Partie TestFrameWork :
 ALL...
