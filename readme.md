@@ -24,6 +24,40 @@ Scripter le lancement (bash unix) :
   * du lancement du programme de gestion de compte en banque
 
 
+Organisation des fichiers :
+---------------------------
+* Logger
+  * src
+    * .java
+  * bin
+    * .class
+
+    
+* TestFrameWork
+  * src
+    * .java
+  * bin
+    * .class
+
+
+* Banking
+  * src
+    - Main.java -> contient le main
+    - Menu.java -> permet de choisir les opérations
+    - Affichage.java -> contient le cadre et les choix
+    - Banque.java -> liste des clients
+    - Client.java -> information client
+    - Credit.java -> information crédit
+    - Operation.java -> fait les opérations
+  * bin
+    * .class
+
+
+* compile.sh -> script de compilation
+* launch_baning.sh -> lance le programme de Banque
+* test.sh -> lance les tests
+* readme.md -> fichier readme en Markdown
+
 Informations sur le Logger :
 ----------------------------
 
