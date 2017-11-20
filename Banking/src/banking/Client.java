@@ -40,15 +40,11 @@ public class Client{
   public int getNumeroCompte(){
     return numero_compte;
   }
-  // public int getNbcredit(){
-  //   return nb_credit;
-  // }
 
   public void depot(double montant){
     if (montant > 0){
       solde += montant;
     } else {
-      //throw new IllegalArgumentException("Montant negatif " + montant);
       System.out.println("Montant négatif " + montant);
     }
   }
@@ -63,10 +59,6 @@ public class Client{
 
   public void setSolde(double montant){
     solde += montant;
-  }
-
-  public void setNbcredit(int nombre){
-    nb_credit = nombre;
   }
 
   public int getNbcredit(){

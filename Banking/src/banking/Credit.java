@@ -15,11 +15,6 @@ public class Credit{
     this.montant_en_cours_rembourse = montant_en_cours_rembourse;
   }
 
-  // public int MontantARembourser(double montant){
-  //   int mensualitee = (montant*taux)/(1-((1+taux)^(duree*12)));
-  //   return montant_a_rembourse = mensualitee*(duree*12) + montant;
-  // }
-
   public boolean remboursementFini(double montant){
     if((montant + montant_en_cours_rembourse) == montant_a_rembourse){
       System.out.println("Pret fini");
