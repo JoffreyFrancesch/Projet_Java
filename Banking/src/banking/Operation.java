@@ -137,7 +137,7 @@ public class Operation{
     System.out.println("Veuiller entrer le montant que vous voulez rembourser :");
     montant = scanner.nextDouble();
     if(credit.remboursement(montant)){
-      client.remonvecredit(numero_credit);
+      credit = client.remonvecredit(numero_credit);
     }
 
   }
