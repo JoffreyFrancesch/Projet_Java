@@ -74,6 +74,30 @@ public class Client{
   }
 
   public void addCredit(String nom_credit,double taux, int duree, double montant){
-    creditList.add(new Credit(nom_credit,taux,duree,montant));
+    creditList.add(new Credit(nom_credit,taux,duree,montant,0));
   }
+
+  public Credit getCredit(int numero_credit){
+    return creditList.get(numero_credit);
+  }
+
+  public void afficherPret(){
+    if (creditList.size() == 0){
+      System.out.println("Vous n'avez aucun crédit en cours");
+    } else {
+      for (Credit credit : creditList){
+        System.out.println("Nom du credit : " + credit.nom_credit + "\nDurée : " + credit.duree + "\n Montant & Taux : " + credit.montant + "€ à " + credit.taux +"%\n" + "Et vous avez rembourser :" + credit.montant_rembourse + "€\n");
+      }
+    }
+  }
+
+  public void removeCredit(int numero_credit){
+    Credit credit = creditList.get(numero_credit);
+    if(credit.remboursementFini()){
+      creditList.remove(numero_credit);
+    } else {
+      System.out.println("Vous n'avez pas fini de rembourser votre credit. Il manque : "+ (credit.montant - credit.montant_rembourse) + "€\n");
+    }
+  }
+
 }

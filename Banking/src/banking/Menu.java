@@ -37,6 +37,9 @@ public class Menu{
           operation.virement();
           break;
         case 8 :
+          operation.remboursementPret();
+          break;
+        case 9 :
           System.out.println("Vous avez quitté. Merci de votre visite");
           System.exit(0);
           break;

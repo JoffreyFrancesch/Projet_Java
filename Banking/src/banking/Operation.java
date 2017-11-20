@@ -7,7 +7,6 @@ public class Operation{
   Scanner scanner = new Scanner(System.in);
   Banque banque = new Banque();
 
-
   public void creer_compte(){
     String prenom, nom;
     int age, numero_compte, nb_credit;
@@ -58,7 +57,6 @@ public class Operation{
     depot = scanner.nextDouble();
     client.depot(depot);
     banque.setClient(numero_compte,client);
-
   }
 
   public void faire_retrait(){
@@ -88,12 +86,59 @@ public class Operation{
   }
 
   public void demande_pret(){
-    //Todo
+    double taux, montant;
+    int duree, numero_compte;
+    String nom_credit;
+    System.out.println("Veuillez selectioner un compte pour faire un creidt\n Numero de compte :");
+    numero_compte = scanner.nextInt();
+    Client client = banque.getClient(numero_compte);
+    if(client.getNbcredit() <= 2){
+    System.out.println("Veuillez entrer le nom du credit :");
+    nom_credit = scanner.next();
+    System.out.println("Veuillez entrer un taux : ");
+    taux = scanner.nextDouble();
+    if(taux <= 1){
+      System.out.println("Taux < 1");
+      taux = scanner.nextDouble();
+    }
+    System.out.println("Veuillez entrer une durée :");
+    duree = scanner.nextInt();
+    if ((duree + client.getAge()) > 70) {
+      System.out.println("La duree du pret est trop longue duree + votre age <= 70");
+      duree = scanner.nextInt();
+    }
+    System.out.println("De combien voullez vous avoir un crédit : ");
+    montant = scanner.nextDouble();
+
+    client.addCredit(nom_credit,taux,duree,montant);
+    client.setSolde(montant);
+    } else {
+    System.out.println("Vous avez deja 2 pret");
+    }
   }
 
   public void liste_pret(){
-    //Todo
-    
+    int numero_compte;
+    System.out.println("Quel numéro de compte voulez vous voir ? ");
+    numero_compte = scanner.nextInt();
+    Client client = banque.getClient(numero_compte);
+    client.afficherPret();
+  }
+
+  public void remboursementPret(){
+    int numero_compte, numero_credit;
+    double montant;
+    System.out.println("Quel numéro de compte voulez vous voir ? ");
+    numero_compte = scanner.nextInt();
+    Client client = banque.getClient(numero_compte);
+    System.out.println("Veuiller entrer le numero de credit a rembourser");
+    numero_credit = scanner.nextInt();
+    Credit credit = client.getCredit(numero_credit);
+    System.out.println("Veuiller entrer le montant que vous voulez rembourser :");
+    montant = scanner.nextDouble();
+    credit.remboursement(montant);
+    client.setSolde(-montant);
+    client.removeCredit(numero_credit);
   }
 
   public void virement(){
