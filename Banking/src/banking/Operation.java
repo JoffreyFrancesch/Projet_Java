@@ -71,7 +71,7 @@ public class Operation{
     System.out.println("Mr."+ client.getNom().toUpperCase()+" "+client.getPrenom() + " Votre solde est de " + client.getSolde() + "€ Combien voulez vous retirer sur votre compte ? ");
     retrait = scanner.nextDouble();
     client.retrait(retrait);
-    banque.setClient(numero_compte,client);
+    banque.setClient(numero_compte,client;
   }
 
   public void historique(){
