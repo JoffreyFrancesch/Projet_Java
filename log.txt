@@ -1,0 +1,6 @@
+INPUT prenom :Joffrey
+INPUT prenom :Joofrey
+INPUT Joffrey
+INPUT 2017-11-22	15:26:03.576	banking	Joffrey
+OUTPUT 2017-11-22	15:37:46.128	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-22	15:37:52.032	Oprération	Joffrey

@@ -1,11 +1,14 @@
 package banking;
 
 import java.util.Scanner;
+import logger.*;
+
 
 
 public class Operation{
   Scanner scanner = new Scanner(System.in);
   Banque banque = new Banque();
+  Logger logger = LoggerFactory.getLogger("Oprération");
 
   public void creer_compte(){
     String prenom, nom;
@@ -13,8 +16,10 @@ public class Operation{
     double premier_depot;
     boolean flag = false;//permet de nous sortir de la boucle quand tout est OK
     //Recuperation du prenom
-    System.out.println("Entrer votre Prénom : ");
+    logger.info("OUTPUT","Entrer votre Prénom : ");
+    //System.out.println("Entrer votre Prénom : ");
     prenom = scanner.next();
+    logger.info("INPUT",prenom);
     //Recuperation du nom
     System.out.println("Entrer votre Nom : ");
     nom = scanner.next();
@@ -71,7 +76,7 @@ public class Operation{
     System.out.println("Mr."+ client.getNom().toUpperCase()+" "+client.getPrenom() + " Votre solde est de " + client.getSolde() + "€ Combien voulez vous retirer sur votre compte ? ");
     retrait = scanner.nextDouble();
     client.retrait(retrait);
-    banque.setClient(numero_compte,client;
+    banque.setClient(numero_compte,client);
   }
 
   public void historique(){

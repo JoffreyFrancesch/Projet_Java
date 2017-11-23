@@ -1,5 +1,6 @@
 package banking;
 import java.util.Scanner;
+import logger.*;
 
 public class Menu{
   Affichage message = new Affichage();
