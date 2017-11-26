@@ -1,6 +1,153 @@
-INPUT prenom :Joffrey
-INPUT prenom :Joofrey
-INPUT Joffrey
-INPUT 2017-11-22	15:26:03.576	banking	Joffrey
-OUTPUT 2017-11-22	15:37:46.128	Oprération	Entrer votre Prénom : 
-INPUT 2017-11-22	15:37:52.032	Oprération	Joffrey
+OUTPUT 2017-11-23	16:03:26.248	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-23	16:03:28.053	Oprération	prenom = Joffrey
+OUTPUT 2017-11-23	16:03:28.053	Oprération	Entrer votre Nom : 
+INPUT 2017-11-23	16:03:32.646	Oprération	nom = Franceschini
+OUTPUT 2017-11-23	16:03:32.647	Oprération	Entrer votre Age : 
+INPUT 2017-11-23	16:03:34.238	Oprération	age = 20
+OUTPUT 2017-11-23	16:03:34.239	Oprération	Entrer un premier dépot d'argent (>0) : 
+INPUT 2017-11-23	16:03:36.488	Oprération	premier depot = 1000.0
+PROGRAM 2017-11-23	16:03:36.488	Oprération	Valeur final du premier depot = 1000.0
+PROGRAM 2017-11-23	16:03:36.490	Oprération	creation du client
+PROGRAM 2017-11-23	16:03:36.491	Oprération	ajout du client à la banque
+OUTPUT 2017-11-23	16:03:36.491	Oprération	Merci d'avoir créer un compte Mr.FRANCESCHINI Joffrey
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+OUTPUT 2017-11-25	11:41:13.735	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-25	11:41:16.462	Oprération	prenom = JOffrey
+OUTPUT 2017-11-25	11:41:16.463	Oprération	Entrer votre Nom : 
+INPUT 2017-11-25	11:41:18.893	Oprération	nom = Francesc
+OUTPUT 2017-11-25	11:41:18.893	Oprération	Entrer votre Age : 
+INPUT 2017-11-25	11:41:20.827	Oprération	age = 20
+OUTPUT 2017-11-25	11:41:20.828	Oprération	Entrer un premier dépot d'argent (>0) : 
+INPUT 2017-11-25	11:41:23.590	Oprération	premier depot = 100.0
+PROGRAM 2017-11-25	11:41:23.591	Oprération	Valeur final du premier depot = 100.0
+PROGRAM 2017-11-25	11:41:23.593	Oprération	creation du client
+PROGRAM 2017-11-25	11:41:23.593	Oprération	ajout du client à la banque
+OUTPUT 2017-11-25	11:41:23.594	Oprération	Merci d'avoir créer un compte Mr.FRANCESC JOffrey
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 100.0€
+
+OUTPUT 2017-11-25	11:41:26.556	Oprération	Bonjour sur quel compte voulez vous faire un depot ? : 
+INPUT 2017-11-25	11:41:29.301	Oprération	numero compte = -10
+OUTPUT 2017-11-25	11:41:39.487	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-25	11:41:40.909	Oprération	prenom = JO
+OUTPUT 2017-11-25	11:41:40.909	Oprération	Entrer votre Nom : 
+INPUT 2017-11-25	11:41:41.937	Oprération	nom = FR
+OUTPUT 2017-11-25	11:41:41.938	Oprération	Entrer votre Age : 
+INPUT 2017-11-25	11:41:43.276	Oprération	age = 20
+OUTPUT 2017-11-25	11:41:43.277	Oprération	Entrer un premier dépot d'argent (>0) : 
+INPUT 2017-11-25	11:41:44.519	Oprération	premier depot = 10.0
+PROGRAM 2017-11-25	11:41:44.520	Oprération	Valeur final du premier depot = 10.0
+PROGRAM 2017-11-25	11:41:44.522	Oprération	creation du client
+PROGRAM 2017-11-25	11:41:44.522	Oprération	ajout du client à la banque
+OUTPUT 2017-11-25	11:41:44.523	Oprération	Merci d'avoir créer un compte Mr.FR JO
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 10.0€
+
+OUTPUT 2017-11-25	11:41:48.446	Oprération	Bonjour sur quel compte voulez vous faire un depot ? : 
+INPUT 2017-11-25	11:41:49.968	Oprération	numero compte = 0
+PROGRAM 2017-11-25	11:41:49.969	Oprération	Recuperation du client
+OUTPUT 2017-11-25	11:41:49.970	Oprération	Mr.FR JO Votre solde est de 10.0€ Combien voulez vous rajouter sur votre compte ? 
+INPUT 2017-11-25	11:41:56.627	Oprération	montant = -10.0
+OUTPUT 2017-11-26	10:54:54.551	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-26	10:54:56.601	Oprération	prenom = Joffrey
+OUTPUT 2017-11-26	10:54:56.601	Oprération	Entrer votre Nom : 
+INPUT 2017-11-26	10:54:59.657	Oprération	nom = Franceschini
+OUTPUT 2017-11-26	10:54:59.657	Oprération	Entrer votre Age : 
+OUTPUT 2017-11-26	10:55:04.917	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-26	10:55:07.254	Oprération	prenom = Joffrey
+OUTPUT 2017-11-26	10:55:07.254	Oprération	Entrer votre Nom : 
+INPUT 2017-11-26	10:55:10.145	Oprération	nom = Franceschini
+OUTPUT 2017-11-26	10:55:10.146	Oprération	Entrer votre Age : 
+INPUT 2017-11-26	10:55:13.081	Oprération	age = 20
+OUTPUT 2017-11-26	10:55:13.081	Oprération	Entrer un premier dépot d'argent (>0) : 
+INPUT 2017-11-26	10:55:16.085	Oprération	premier depot = 1000.0
+PROGRAM 2017-11-26	10:55:16.085	Oprération	Valeur final du premier depot = 1000.0
+PROGRAM 2017-11-26	10:55:16.087	Oprération	creation du client
+PROGRAM 2017-11-26	10:55:16.087	Oprération	ajout du client à la banque
+OUTPUT 2017-11-26	10:55:16.088	Oprération	Merci d'avoir créer un compte Mr.FRANCESCHINI Joffrey
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+OUTPUT 2017-11-26	10:55:19.078	Oprération	Bonjour sur quel compte voulez vous faire un depot ? : 
+INPUT 2017-11-26	10:55:20.645	Oprération	numero compte = 0
+PROGRAM 2017-11-26	10:55:20.646	Oprération	Recuperation du client
+OUTPUT 2017-11-26	10:55:20.647	Oprération	Mr.FRANCESCHINI Joffrey Votre solde est de 1000.0€ Combien voulez vous rajouter sur votre compte ? 
+INPUT 2017-11-26	10:55:23.891	Oprération	montant = -1.0
+PROGRAM 2017-11-26	10:55:23.892	Oprération	Modification du solde du compte
+OUTPUT 2017-11-26	11:02:35.114	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-26	11:02:37.234	Oprération	prenom = Joffrey
+OUTPUT 2017-11-26	11:02:37.234	Oprération	Entrer votre Nom : 
+INPUT 2017-11-26	11:02:38.219	Oprération	nom = FR
+OUTPUT 2017-11-26	11:02:38.219	Oprération	Entrer votre Age : 
+INPUT 2017-11-26	11:02:40.386	Oprération	age = 20
+OUTPUT 2017-11-26	11:02:40.387	Oprération	Entrer un premier dépot d'argent (>0) : 
+INPUT 2017-11-26	11:02:43.118	Oprération	premier depot = 1000.0
+PROGRAM 2017-11-26	11:02:43.118	Oprération	Valeur final du premier depot = 1000.0
+PROGRAM 2017-11-26	11:02:43.120	Oprération	creation du client
+PROGRAM 2017-11-26	11:02:43.121	Oprération	ajout du client à la banque
+OUTPUT 2017-11-26	11:02:43.121	Oprération	Merci d'avoir créer un compte Mr.FR Joffrey
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+OUTPUT 2017-11-26	11:02:45.611	Oprération	Bonjour sur quel compte voulez vous faire un depot ? : 
+INPUT 2017-11-26	11:02:48.198	Oprération	numero compte = -10
+OUTPUT 2017-11-26	11:02:54.969	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-26	11:02:57.231	Oprération	prenom = JOf
+OUTPUT 2017-11-26	11:02:57.232	Oprération	Entrer votre Nom : 
+INPUT 2017-11-26	11:02:59.399	Oprération	nom = France
+OUTPUT 2017-11-26	11:02:59.400	Oprération	Entrer votre Age : 
+INPUT 2017-11-26	11:03:04.068	Oprération	age = 20
+OUTPUT 2017-11-26	11:03:04.069	Oprération	Entrer un premier dépot d'argent (>0) : 
+INPUT 2017-11-26	11:03:06.766	Oprération	premier depot = 1000.0
+PROGRAM 2017-11-26	11:03:06.767	Oprération	Valeur final du premier depot = 1000.0
+PROGRAM 2017-11-26	11:03:06.769	Oprération	creation du client
+PROGRAM 2017-11-26	11:03:06.770	Oprération	ajout du client à la banque
+OUTPUT 2017-11-26	11:03:06.770	Oprération	Merci d'avoir créer un compte Mr.FRANCE JOf
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+OUTPUT 2017-11-26	11:03:08.548	Oprération	Bonjour sur quel compte voulez vous faire un depot ? : 
+INPUT 2017-11-26	11:03:09.829	Oprération	numero compte = 0
+PROGRAM 2017-11-26	11:03:09.829	Oprération	Recuperation du client
+OUTPUT 2017-11-26	11:03:09.830	Oprération	Mr.FRANCE JOf Votre solde est de 1000.0€ Combien voulez vous rajouter sur votre compte ? 
+INPUT 2017-11-26	11:03:15.449	Oprération	montant = -10.0
+OUTPUT 2017-11-26	11:10:27.428	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-26	11:10:29.447	Oprération	prenom = Joff
+OUTPUT 2017-11-26	11:10:29.448	Oprération	Entrer votre Nom : 
+INPUT 2017-11-26	11:10:31.323	Oprération	nom = Fran
+OUTPUT 2017-11-26	11:10:31.323	Oprération	Entrer votre Age : 
+INPUT 2017-11-26	11:10:32.711	Oprération	age = 20
+OUTPUT 2017-11-26	11:10:32.712	Oprération	Entrer un premier dépot d'argent (>0) : 
+INPUT 2017-11-26	11:10:34.050	Oprération	premier depot = 1000.0
+PROGRAM 2017-11-26	11:10:34.051	Oprération	Valeur final du premier depot = 1000.0
+PROGRAM 2017-11-26	11:10:34.052	Oprération	creation du client
+PROGRAM 2017-11-26	11:10:34.053	Oprération	ajout du client à la banque
+OUTPUT 2017-11-26	11:10:34.054	Oprération	Merci d'avoir créer un compte Mr.FRAN Joff
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+OUTPUT 2017-11-26	11:10:35.746	Oprération	Bonjour sur quel compte voulez vous faire un depot ? : 
+INPUT 2017-11-26	11:10:39.155	Oprération	numero compte = -10
+OUTPUT 2017-11-26	11:10:45.331	Oprération	Entrer votre Prénom : 
+INPUT 2017-11-26	11:10:46.814	Oprération	prenom = Jo
+OUTPUT 2017-11-26	11:10:46.815	Oprération	Entrer votre Nom : 
+INPUT 2017-11-26	11:10:48.131	Oprération	nom = F
+OUTPUT 2017-11-26	11:10:48.132	Oprération	Entrer votre Age : 
+INPUT 2017-11-26	11:10:49.784	Oprération	age = 20
+OUTPUT 2017-11-26	11:10:49.785	Oprération	Entrer un premier dépot d'argent (>0) : 
+INPUT 2017-11-26	11:10:53.273	Oprération	premier depot = 1000.0
+PROGRAM 2017-11-26	11:10:53.273	Oprération	Valeur final du premier depot = 1000.0
+PROGRAM 2017-11-26	11:10:53.275	Oprération	creation du client
+PROGRAM 2017-11-26	11:10:53.275	Oprération	ajout du client à la banque
+OUTPUT 2017-11-26	11:10:53.276	Oprération	Merci d'avoir créer un compte Mr.F Jo
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+OUTPUT 2017-11-26	11:10:55.484	Oprération	Bonjour sur quel compte voulez vous faire un depot ? : 
+INPUT 2017-11-26	11:10:58.897	Oprération	numero compte = 0
+PROGRAM 2017-11-26	11:10:58.898	Oprération	Recuperation du client
+OUTPUT 2017-11-26	11:10:58.899	Oprération	Mr.F Jo Votre solde est de 1000.0€ Combien voulez vous rajouter sur votre compte ? 
+INPUT 2017-11-26	11:11:01.365	Oprération	montant = -10.0
+PROGRAM 2017-11-26	11:11:01.366	Oprération	Modification du solde du compte
