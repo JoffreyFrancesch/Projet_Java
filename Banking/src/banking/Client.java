@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import logger.*;
 
+
 public class Client{
   private final String prenom;
   private final String nom;
@@ -12,6 +13,7 @@ public class Client{
   private final int numero_compte;
   private int nb_credit;
   private List<Credit> creditList = new ArrayList<Credit>();
+  Logger logger = LoggerFactory.getLogger("Client");
 
   public Client(String prenom, String nom, int age,double solde, int nb_credit,int numero_compte){
     this.prenom = prenom;
@@ -46,7 +48,7 @@ public class Client{
     if (montant > 0){
       solde += montant;
     } else {
-      System.out.println("Montant négatif " + montant);
+      logger.error("OUTPUT","Montant négatif " + montant);
     }
   }
 
@@ -54,7 +56,7 @@ public class Client{
     if (montant <= solde){
       solde -= montant;
     } else {
-      System.out.println("Montant supérieur au solde " + montant + solde);
+      logger.error("OUTPUT","Montant supérieur au solde " + montant + solde);
     }
   }
 
@@ -80,10 +82,10 @@ public class Client{
 
   public void afficherPret(){
     if (creditList.size() == 0){
-      System.out.println("Vous n'avez aucun crédit en cours");
+      logger.info("OUTPUT","Vous n'avez aucun crédit en cours");
     } else {
       for (Credit credit : creditList){
-        System.out.println("Numéro credit : " + credit.numero_credit + "\nNom du credit : " +  credit.nom_credit + "\nDurée : " + credit.duree + "\nMontant & Taux : " + credit.montant_a_rembourse + "€ à " + credit.taux +"%\n" + "Et vous avez rembourser :" + credit.montant_en_cours_rembourse + "€\n");
+        logger.info("OUTPUT","Numéro credit : " + credit.numero_credit + "\nNom du credit : " +  credit.nom_credit + "\nDurée : " + credit.duree + "\nMontant & Taux : " + credit.montant_a_rembourse + "€ à " + credit.taux +"%\n" + "Et vous avez rembourser :" + credit.montant_en_cours_rembourse + "€\n");
       }
     }
   }

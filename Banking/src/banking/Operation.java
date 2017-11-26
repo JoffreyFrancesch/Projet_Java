@@ -114,10 +114,10 @@ public class Operation{
     logger.info("PROGRAM","Calcul du montant a rembourser et ajout du credit");
     client.setSolde(montant);
     logger.info("PROGRAM","Attribution du crédit demander");
+    logger.info("INPUT", "Choix compte = " + numero_compte + " Nom crédit = " + nom_credit +  " Taux = " + taux + " Duree = " + duree + " Montant = "+montant);
     } else {
     logger.error("OUTPUT","Vous avez deja 2 credit");
     }
-    logger.info("INPUT", "Choix compte = " + numero_compte + " Nom crédit = " + nom_credit +  " Taux = " + taux + " Duree = " + duree + " Montant = "+montant);
   }
 
   public void liste_pret(){
@@ -152,33 +152,31 @@ public class Operation{
   public void virement(){
     int numero_compte_debit, numero_compte_credit;
     double virement, solde_debit, solde_credit;
-    //recuperation du compte débiteur
-    System.out.println("Veuillez entrer le numero de compte à débiter : ");
+    logger.info("OUTPUT","Veuillez entrer le numero de compte à débiter : ");
     numero_compte_debit = scanner.nextInt();
-    //recuperation du compte créditeur
-    System.out.println("Veuillez entrer le numero de compte à créditer : ");
+    logger.info("OUTPUT","Veuillez entrer le numero de compte à créditer : ");
     numero_compte_credit = scanner.nextInt();
-    //recuperation des deux clients dans la liste des clients
+    logger.info("PROGRAM","Récupérations des données clients");
     Client debit = banque.getClient(numero_compte_debit);
     Client credit = banque.getClient(numero_compte_credit);
-    //recuperation du montant du virement
-    System.out.println("Veuiller entrer le montant du virement que vous souhaitez effectuer : ");
+    logger.info("OUTPUT","Veuiller entrer le montant du virement que vous souhaitez effectuer : ");
     virement = scanner.nextDouble();
-    //test si la valeur est bonne
     if (virement >= debit.getSolde()){
-      //on redemande une valeur
-      System.out.println("La valeur est supérieur au solde du compte débiteur");
-      System.out.println("Veuillez entrer une nouvelle valeur : ");
+      logger.error("OUTPUT","La valeur est supérieur au solde du compte débiteur");
+      logger.info("OUTPUT","Veuillez entrer une nouvelle valeur : ");
       virement = scanner.nextDouble();
     }
-    //modification des solde des deux comptes
+    logger.info("PROGRAM","Calcul des nouveaux soldes");
     solde_debit = debit.getSolde() - virement;
     solde_credit = credit.getSolde() + virement;
-    //mise à jour des deux soldes des clients dans la liste des clients
+    logger.info("PROGRAM","Modification des soldes");
     debit.setSolde(solde_debit);
     credit.setSolde(solde_credit);
+    logger.info("PROGRAM","Mise à jour des données clients dans la banque");
     banque.setClient(numero_compte_debit,debit);
     banque.setClient(numero_compte_credit,credit);
+
+    logger.info("INPUT","Compte debit = " + numero_compte_debit + " Compte credit = " + numero_compte_credit + " Montant virement = " + virement);
   }
 
 }
