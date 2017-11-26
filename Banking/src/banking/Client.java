@@ -2,6 +2,7 @@ package banking;
 
 import java.util.ArrayList;
 import java.util.List;
+import logger.*;
 
 public class Client{
   private final String prenom;
