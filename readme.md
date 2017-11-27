@@ -41,7 +41,7 @@ Organisation des fichiers :
 
 * TestFrameWork
   * src
-    * .java
+    * RunTest.java
   * bin
     * .class
 
@@ -99,39 +99,38 @@ public class LoggerFactory  {
 Informations sur le TestFrameWork :
 -----------------------------------
 
-Dans cette partie nous testons nos deux méthodes de retrait et dépôt en utilisant le try/catch pour récupérer les erreurs s'il y en a.
+Dans cette partie nous bouclons sur toutes les classes que nous appelons dans notre __test.sh__ c'est à dire toutes les classes de notre projet, grâce à la boucle __for__ ci-dessous.
 
-```java
-Client client = new Client("Arnaud","Dupont",26,10,0,0);
-//Client Arnaud Dupont 26 ans 10€ sur le compte Numero de compte 0 et Nb de Crédit 0
-  try{//test méthode de dépot
-    client.depot(10);//sans erreur
-  } catch (Error e){
-    //traitement de l'erreur
+ ```java
+  for(String className : args){
+    //...
   }
+ ```
 
-  try {
-    client.depot(-10);//avec erreur   
-  } catch(Error e) {
-    //traitement de l'erreur
-  }
-```
-
-Nous faisons pareil pour la méthode retrait :
+ Pour ensuite tester classe par classe et méthode par méthode on a encapsulé plusieurs __try/catch__ voici notre code :
 
   ```java
-Client client = new Client("Arnaud","Dupont",26,10,0,0);
-  //Client Arnaud Dupont 26 ans 10€ sur le compte Numero de compte 0 et Nb de Crédit 0
-  try{
-    client.retrait(5);//sans erreur
-  } catch (Error e) {
-    //traitement de l'erreur
-  }
-
-  try{
-    client.retrait(50);//avec erreur car 10€ sur le compte
-  } catch (Error e) {
-    //traitement de l'erreur
+  try {
+    clazz = Class.forName(className);
+    long endTime = System.currentTimeMillis();
+    System.out.println("Classe : "+ className+ " : OK  "+(endTime-startTime)+" ms");
+    reussite++;
+    for(Method method : clazz.getDeclaredMethods()) {//Boucle pour tester chaque méthode
+      try {
+        clazz = Class.forName(className);
+        System.out.println("	Methode : "+method.getName()+" : OK");
+      } catch (ClassNotFoundException e) {
+        System.out.println("	Methode : "+method.getName()+" : KO");
+        erreur++;
+      }
+      reussite++;
+      cpt++;
+    }
+    System.out.println("\n");
+    cpt=1;
+  } catch (ClassNotFoundException e) {
+    System.out.println("Classe : "+ className +" KO");
+    erreur++;
   }
   ```
 
