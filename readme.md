@@ -220,5 +220,5 @@ TODO LIST :
 
 
 * Partie TestFrameWork :
-  - [ ] test sur depot
-  - [ ] test sur retrait
+  - [x] Test classes
+  - [x] Test méthodes
