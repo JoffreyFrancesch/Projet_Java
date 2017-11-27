@@ -22,7 +22,7 @@ public class RunTest {
 			try {
 				clazz = Class.forName(className);
 				long endTime = System.currentTimeMillis();
-				System.out.println("Classe : "+ className+ ": OK  "+(endTime-startTime)+" ms");
+				System.out.println("Classe : "+ className+ " : OK  "+(endTime-startTime)+" ms");
 				reussite++;
 
 				for(Method method : clazz.getDeclaredMethods()) {
@@ -30,10 +30,10 @@ public class RunTest {
 
 					try {
 						clazz = Class.forName(className);
-						System.out.println("	Methode : "+method.getName()+": OK");
+						System.out.println("	Methode : "+method.getName()+" : OK");
 
 					} catch (ClassNotFoundException e) {
-						System.out.println("	Methode : "+method.getName()+": KO");
+						System.out.println("	Methode : "+method.getName()+" : KO");
 
 						erreur++;
 
