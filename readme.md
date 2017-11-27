@@ -81,9 +81,9 @@ La syntaxe sur la console est dans le fichier est différente, dans le terminal 
 
   `OUTPUT 2017-11-23	16:03:32.646	Veuillez entrer un montant`
 
-  `INPUT 2017-11-23	16:03:32.646	Oprération	Montant rentré = 100`
+  `INPUT 2017-11-23	16:03:32.646	Opération	Montant rentré = 100`
 
-  `PROGRAM 2017-11-23	16:03:32.646	Oprération	Récupération des infos clients`
+  `PROGRAM 2017-11-23	16:03:32.646	Opération	Récupération des infos clients`
 
 Nous avons choisi de faire ainsi pour éclairscire l'affichage en terminal. Cet affichage ce dans le fichier __LoggerFactory.java__ où nous contrôlons la création des deux logger. Grâce au code ci-dessous.
 
