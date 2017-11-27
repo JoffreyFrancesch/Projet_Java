@@ -56,7 +56,7 @@ public class Client{
     if (montant <= solde){
       solde -= montant;
     } else {
-      logger.error("OUTPUT","Montant supérieur au solde " + montant + solde);
+      logger.error("OUTPUT","Montant supérieur au solde " + montant +" Solde " + solde);
     }
   }
 
@@ -85,7 +85,7 @@ public class Client{
       logger.info("OUTPUT","Vous n'avez aucun crédit en cours");
     } else {
       for (Credit credit : creditList){
-        logger.info("OUTPUT","Numéro credit : " + credit.numero_credit + "\nNom du credit : " +  credit.nom_credit + "\nDurée : " + credit.duree + "\nMontant & Taux : " + credit.montant_a_rembourse + "€ à " + credit.taux +"%\n" + "Et vous avez rembourser :" + credit.montant_en_cours_rembourse + "€\n");
+        logger.info("OUTPUT","Numéro crédit : " + credit.numero_credit + "\nNom du crédit : " +  credit.nom_credit + "\nDurée : " + credit.duree + "\nMontant & Taux : " + credit.montant_a_rembourse + "€ à " + credit.taux +"%\n" + "Et vous avez remboursé :" + credit.montant_en_cours_rembourse + "€\n");
       }
     }
   }

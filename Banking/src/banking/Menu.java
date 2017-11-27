@@ -12,7 +12,7 @@ public class Menu{
     message.message_acceuil();
     do {
       message.message_selection();
-      System.out.println("\033[1;31mEntrer votre choix\033[0m");
+      System.out.println("\033[1;31mEntrez votre choix\033[0m");
       choix = scanner.nextInt();
 
       switch(choix){
