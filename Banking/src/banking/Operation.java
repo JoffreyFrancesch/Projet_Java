@@ -22,6 +22,11 @@ public class Operation{
     nom = scanner.next();
     logger.info("OUTPUT","Entrer votre Age : ");
     age = scanner.nextInt();
+    if(age < 10){
+      logger.error("OUTPUT", "Vous devez avoir au moins 10ans pour créer un compte");
+      logger.info("OUTPUT","Entrer votre age de nouveau ");
+      age = scanner.nextInt();
+    }
     do {
       logger.info("OUTPUT","Entrer un premier dépot d'argent (>0) : ");
       premier_depot = scanner.nextDouble();
@@ -46,6 +51,7 @@ public class Operation{
   }
 
   public void faire_depot(){
+    if(banque.getSize() > 0){
     int numero_compte;
     double depot, nouveau_solde;
     logger.info("OUTPUT","Bonjour sur quel compte voulez vous faire un depot ? : ");
@@ -58,9 +64,12 @@ public class Operation{
     banque.setClient(numero_compte,client);
     logger.info("PROGRAM", "Modification du solde du compte");
     logger.info("INPUT", "numero compte = " + numero_compte + " montant = " + depot);
+  } else {
+    logger.info("OUTPUT","Il n'y à aucun compte en banque");
   }
-
+}
   public void faire_retrait(){
+    if(banque.getSize() > 0){
     int numero_compte;
     double retrait, nouveau_solde;
     logger.info("OUTPUT","Bonjour sur quel compte voulez vous faire un depot ? : ");
@@ -73,7 +82,10 @@ public class Operation{
     banque.setClient(numero_compte,client);
     logger.info("PROGRAM","Modification du solde du compte");
     logger.info("INPUT","numero compte = " + numero_compte + " montant = " + retrait);
+  } else {
+    logger.info("OUTPUT","Il n'y à aucun compte en banque");
   }
+}
 
   public void historique(){
     int numero_compte;
