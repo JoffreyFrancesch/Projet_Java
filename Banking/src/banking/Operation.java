@@ -24,7 +24,7 @@ public class Operation{
     age = scanner.nextInt();
     if(age < 10){
       logger.error("OUTPUT", "Vous devez avoir au moins 10ans pour créer un compte");
-      logger.info("OUTPUT","Entrez votre age de nouveau ");
+      logger.info("OUTPUT","Entrez votre âge de nouveau ");
       age = scanner.nextInt();
     }
     do {
@@ -51,42 +51,42 @@ public class Operation{
     if(banque.getSize() > 0){
     int numero_compte;
     double depot, nouveau_solde;
-    logger.info("OUTPUT","Bonjour sur quel compte voulez vous faire un dépot ? : ");
+    logger.info("OUTPUT","Bonjour sur quel compte voulez-vous faire un dépot ? : ");
     numero_compte = scanner.nextInt();
     Client client = banque.getClient(numero_compte);
     logger.info("PROGRAM", "Récupération du client");
-    logger.info("OUTPUT","Mr."+ client.getNom().toUpperCase()+" " +client.getPrenom() + " Votre solde est de " + client.getSolde() + "€ Combien voulez vous rajouter sur votre compte ? ");
+    logger.info("OUTPUT","Mr."+ client.getNom().toUpperCase()+" " +client.getPrenom() + " Votre solde est de " + client.getSolde() + "€ Combien voulez-vous rajouter sur votre compte ? ");
     depot = scanner.nextDouble();
     client.depot(depot);
     banque.setClient(numero_compte,client);
     logger.info("PROGRAM", "Modification du solde du compte");
     logger.info("INPUT", "Numero compte = " + numero_compte + " Montant = " + depot);
   } else {
-    logger.info("OUTPUT","Il n'y à aucun compte en banque");
+    logger.info("OUTPUT","Il n'y a aucun compte en banque");
   }
 }
   public void faire_retrait(){
     if(banque.getSize() > 0){
     int numero_compte;
     double retrait, nouveau_solde;
-    logger.info("OUTPUT","Bonjour sur quel compte voulez vous faire un retrait ? : ");
+    logger.info("OUTPUT","Bonjour sur quel compte voulez-vous faire un retrait ? : ");
     numero_compte = scanner.nextInt();
     Client client = banque.getClient(numero_compte);
     logger.info("PROGRAM", "Récupération du client");
-    logger.info("OUTPUT","Mr."+ client.getNom().toUpperCase()+" "+client.getPrenom() + " Votre solde est de " + client.getSolde() + "€ Combien voulez vous retirer sur votre compte ? ");
+    logger.info("OUTPUT","Mr."+ client.getNom().toUpperCase()+" "+client.getPrenom() + " Votre solde est de " + client.getSolde() + "€ Combien voulez-vous retirer sur votre compte ? ");
     retrait = scanner.nextDouble();
     client.retrait(retrait);
     banque.setClient(numero_compte,client);
     logger.info("PROGRAM","Modification du solde du compte");
     logger.info("INPUT","Numero compte = " + numero_compte + " Montant = " + retrait);
   } else {
-    logger.info("OUTPUT","Il n'y à aucun compte en banque");
+    logger.info("OUTPUT","Il n'y a aucun compte en banque");
   }
 }
 
   public void historique(){
     int numero_compte;
-    logger.info("OUTPUT","Sur quel compte voulez voir votre historique ?");
+    logger.info("OUTPUT","Sur quel compte voulez-vous voir votre historique ?");
     numero_compte = scanner.nextInt();
     logger.info("PROGRAM", "Récupération du client");
     Client client = banque.getClient(numero_compte);
@@ -114,25 +114,25 @@ public class Operation{
     logger.info("OUTPUT","Veuillez entrer une durée :");
     duree = scanner.nextInt();
     if ((duree + client.getAge()) > 70) {
-      logger.info("OUTPUT","La duree du crédit est trop longue duree + votre age <= 70");
+      logger.info("OUTPUT","La durée du crédit est trop longue duree + votre age <= 70");
       logger.info("OUTPUT", "Nouvelle durée :");
       duree = scanner.nextInt();
     }
-    logger.info("OUTPUT","De combien voullez vous avoir un crédit : ");
+    logger.info("OUTPUT","De combien voullez-vous avoir un crédit : ");
     montant = scanner.nextDouble();
     client.addCredit(nom_credit,taux,duree,montant);
     logger.info("PROGRAM","Calcul du montant à rembourser et ajout du crédit");
     client.setSolde(montant);
-    logger.info("PROGRAM","Attribution du crédit demandée");
+    logger.info("PROGRAM","Attribution du crédit demandé");
     logger.info("INPUT", "Choix compte = " + numero_compte + " Nom crédit = " + nom_credit +  " Taux = " + taux + " Durée = " + duree + " Montant = "+montant);
     } else {
-    logger.error("OUTPUT","Vous avez déjà 2 crédits");
+    logger.error("OUTPUT","Vous avez déjà deux crédits");
     }
   }
 
   public void liste_pret(){
     int numero_compte;
-    logger.info("OUTPUT","Quel numéro de compte voulez vous voir ? ");
+    logger.info("OUTPUT","Quel numéro de compte voulez-vous voir ? ");
     numero_compte = scanner.nextInt();
     Client client = banque.getClient(numero_compte);
     logger.info("PROGRAM","Récupération des données client");
@@ -143,7 +143,7 @@ public class Operation{
   public void remboursementPret(){
     int numero_compte, numero_credit;
     double montant;
-    logger.info("OUTPUT","Sur quel numero de compte voulez vous rembourser un crédit");
+    logger.info("OUTPUT","Sur quel numero de compte voulez-vous rembourser un crédit");
     numero_compte = scanner.nextInt();
     Client client = banque.getClient(numero_compte);
     logger.info("OUTPUT","Veuiller entrer le numero de credit à rembourser (0 pour le premier et 1 pour le second)");
@@ -173,7 +173,7 @@ public class Operation{
     logger.info("OUTPUT","Veuiller entrer le montant du virement que vous souhaitez effectuer : ");
     virement = scanner.nextDouble();
     if (virement >= debit.getSolde()){
-      logger.error("OUTPUT","La valeur est supérieur au solde du compte débiteur");
+      logger.error("OUTPUT","La valeur est supérieure au solde du compte débiteur");
       logger.info("OUTPUT","Veuillez entrer une nouvelle valeur : ");
       virement = scanner.nextDouble();
     }

@@ -85,7 +85,7 @@ La syntaxe sur la console est dans le fichier est différente, dans le terminal 
 
   `PROGRAM 2017-11-23	16:03:32.646	Opération	Récupération des infos clients`
 
-Nous avons choisi de faire ainsi pour éclairscire l'affichage en terminal. Cet affichage ce dans le fichier __LoggerFactory.java__ où nous contrôlons la création des deux logger. Grâce au code ci-dessous.
+Nous avons choisi de faire ainsi pour éclaircir l'affichage en terminal. Cet affichage se fait dans le fichier __LoggerFactory.java__ où nous contrôlons la création des deux loggers. Grâce au code ci-dessous.
 
 ```java
 public class LoggerFactory  {
@@ -165,7 +165,7 @@ Un client contient plusieurs informations tel que :
   Un crédit contient plusieurs informations tel que :
   - Son taux
   - Sa durée
-  - Son montant à rembourser (incluant les mensualtées)
+  - Son montant à rembourser (incluant les mensualités)
   - Le montant qui à été remboursé
   - Le nom du Crédit
   - Le numero du Crédit
@@ -183,7 +183,7 @@ Un client contient plusieurs informations tel que :
   }
   ```
 
-  La banque contient toute les informations précédentes grâce à une liste chainée qui prend toute les informations du client et des crédits du client.
+  La banque contient toutes les informations précédentes grâce à une liste chainée qui prend toutes les informations du client et des crédits du client.
 
   ```java
   public class Banque{
