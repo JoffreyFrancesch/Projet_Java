@@ -8,9 +8,9 @@ import java.text.*;
 public class RunTest {
 
 	public static void main(String[] args) {
-		double error = 0;
-		double succes= 0.0;
-		double pourc=0.0;
+		double erreur = 0;
+		double reussite= 0.0;
+		double pourcentage=0.0;
 		long startProg = System.currentTimeMillis();
 		int cpt=1;
 
@@ -22,23 +22,23 @@ public class RunTest {
 			try {
 				clazz = Class.forName(className);
 				long endTime = System.currentTimeMillis();
-				System.out.println("La Classe "+ className+ ": OK  "+(endTime-startTime)+" ms");
-				succes++;
+				System.out.println("Classe : "+ className+ ": OK  "+(endTime-startTime)+" ms");
+				reussite++;
 
 				for(Method method : clazz.getDeclaredMethods()) {
 
 
 					try {
 						clazz = Class.forName(className);
-						System.out.println("La Methode "+method.getName()+": OK");
+						System.out.println("	Methode : "+method.getName()+": OK");
 
 					} catch (ClassNotFoundException e) {
-						System.out.println("La Methode "+method.getName()+": KO");
+						System.out.println("	Methode : "+method.getName()+": KO");
 
-						error++;
+						erreur++;
 
 					}
-					succes++;
+					reussite++;
 					cpt++;
 
 
@@ -48,8 +48,8 @@ public class RunTest {
 				cpt=1;
 			} catch (ClassNotFoundException e) {
 
-				System.out.println("La Classe : "+ className +" KO");
-				error++;
+				System.out.println("Classe : "+ className +" KO");
+				erreur++;
 
 			}
 
@@ -58,14 +58,14 @@ public class RunTest {
 
 		long endProg = System.currentTimeMillis();
 
-		pourc=(succes/(succes+error))*100;
+		pourcentage=(reussite/(reussite+erreur))*100;
 
 
 		DecimalFormat df = new DecimalFormat("00.00");
 		DecimalFormat di = new DecimalFormat("00");
 
 
-		System.out.println("Test run: "+di.format(error+succes)+"    Error:" + di.format(error) + "    Succes:"+di.format(succes)+ "\nSucces rate "+df.format(pourc)+"%\nRun time:"+(endProg-startProg)+" ms");
+		System.out.println("Test run : "+di.format(erreur+reussite)+"    Erreur : " + di.format(erreur) + "    Reussite : "+di.format(reussite)+ "\nTaux de reussite "+df.format(pourcentage)+"%\nRun time:"+(endProg-startProg)+" ms");
 
 	}
 }
