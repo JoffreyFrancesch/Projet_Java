@@ -1,0 +1,168 @@
+OUTPUT 2017-11-27	09:29:55.432	Oprération	Il n'y à aucun compte en banque
+OUTPUT 2017-11-27	09:29:57.427	Oprération	Il n'y à aucun compte en banque
+OUTPUT 2017-11-27	09:30:04.394	Oprération	Entrez votre Prénom : 
+OUTPUT 2017-11-27	09:30:06.674	Oprération	Entrez votre Nom : 
+OUTPUT 2017-11-27	09:30:08.861	Oprération	Entrez votre Age : 
+OUTPUT 2017-11-27	09:30:10.530	Oprération	Entrez un premier dépot d'argent (>0) : 
+PROGRAM 2017-11-27	09:30:12.873	Oprération	Attribution du numéro de compte
+PROGRAM 2017-11-27	09:30:12.875	Oprération	Création du client
+PROGRAM 2017-11-27	09:30:12.876	Oprération	Ajout du client à la banque
+OUTPUT 2017-11-27	09:30:12.878	Oprération	Merci d'avoir créé un compte Mr.FRANCESCHINI Joffrey
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+INPUT 2017-11-27	09:30:12.879	Oprération	Prénom = Joffrey Nom = Franceschini Age = 20 Premier dépot = 1000.0
+OUTPUT 2017-11-27	09:30:14.784	Oprération	Bonjour sur quel compte voulez vous faire un dépot ? : 
+PROGRAM 2017-11-27	09:30:17.496	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:30:17.497	Oprération	Mr.FRANCESCHINI Joffrey Votre solde est de 1000.0€ Combien voulez vous rajouter sur votre compte ? 
+PROGRAM 2017-11-27	09:30:21.077	Oprération	Modification du solde du compte
+INPUT 2017-11-27	09:30:21.077	Oprération	Numero compte = 0 Montant = 10.0
+OUTPUT 2017-11-27	09:30:26.915	Oprération	Sur quel compte voulez voir votre historique ?
+PROGRAM 2017-11-27	09:30:27.798	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:30:27.799	Oprération	Bonjour Mr.Franceschini  Joffrey
+Vous avez : 1010.0€ sur votre compte
+
+INPUT 2017-11-27	09:30:27.800	Oprération	Compte selectionné = 0
+OUTPUT 2017-11-27	09:30:31.527	Oprération	Bonjour sur quel compte voulez vous faire un retrait ? : 
+PROGRAM 2017-11-27	09:30:33.053	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:30:33.054	Oprération	Mr.FRANCESCHINI Joffrey Votre solde est de 1010.0€ Combien voulez vous retirer sur votre compte ? 
+PROGRAM 2017-11-27	09:30:35.909	Oprération	Modification du solde du compte
+INPUT 2017-11-27	09:30:35.910	Oprération	Numero compte = 0 Montant = 10.0
+OUTPUT 2017-11-27	09:30:38.960	Oprération	Sur quel compte voulez voir votre historique ?
+PROGRAM 2017-11-27	09:30:39.773	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:30:39.774	Oprération	Bonjour Mr.Franceschini  Joffrey
+Vous avez : 1000.0€ sur votre compte
+
+INPUT 2017-11-27	09:30:39.775	Oprération	Compte selectionné = 0
+OUTPUT 2017-11-27	09:30:42.362	Oprération	Veuillez selectioner un compte pour faire un crédit
+ Numero de compte :
+PROGRAM 2017-11-27	09:30:46.868	Oprération	Récupération infos client
+OUTPUT 2017-11-27	09:30:46.871	Oprération	Veuillez entrer le nom du crédit :
+OUTPUT 2017-11-27	09:30:49.833	Oprération	Veuillez entrer un taux : 
+OUTPUT 2017-11-27	09:30:52.166	Oprération	Veuillez entrer une durée :
+OUTPUT 2017-11-27	09:30:55.098	Oprération	De combien voullez vous avoir un crédit : 
+PROGRAM 2017-11-27	09:30:57.804	Oprération	Calcul du montant à rembourser et ajout du crédit
+PROGRAM 2017-11-27	09:30:57.805	Oprération	Attribution du crédit demandée
+INPUT 2017-11-27	09:30:57.806	Oprération	Choix compte = 0 Nom crédit = TEST Taux = 1.2 Durée = 10 Montant = 1000.0
+OUTPUT 2017-11-27	09:31:13.685	Oprération	Sur quel compte voulez voir votre historique ?
+PROGRAM 2017-11-27	09:31:19.905	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:31:19.906	Oprération	Bonjour Mr.Franceschini  Joffrey
+Vous avez : 2000.0€ sur votre compte
+
+INPUT 2017-11-27	09:31:19.907	Oprération	Compte selectionné = 0
+OUTPUT 2017-11-27	09:31:22.854	Oprération	Quel numéro de compte voulez vous voir ? 
+PROGRAM 2017-11-27	09:31:24.006	Oprération	Récupération des données client
+OUTPUT 2017-11-27	09:31:24.007	Client	Numéro crédit : 0
+Nom du crédit : TEST
+Durée : 10
+Montant & Taux : 1061.6990296380752€ à 1.2%
+Et vous avez remboursé :0.0€
+
+INPUT 2017-11-27	09:31:24.008	Oprération	Numéro compte = 0
+OUTPUT 2017-11-27	09:31:35.166	Oprération	Sur quel numero de compte voulez vous rembourser un crédit
+OUTPUT 2017-11-27	09:31:37.957	Oprération	Veuiller entrer le numero de credit à rembourser (0 pour le premier et 1 pour le second)
+PROGRAM 2017-11-27	09:31:38.955	Oprération	Récupération des données client
+PROGRAM 2017-11-27	09:31:38.957	Oprération	Veuillez entrer le montant que vous voulez rembourser :
+OUTPUT 2017-11-27	09:31:49.485	Credit	Crédit fini
+PROGRAM 2017-11-27	09:31:49.485	Oprération	SUPPRESION DU CREDIT
+INPUT 2017-11-27	09:31:49.486	Oprération	Numéro compte = 0 Numéro crédit = 0 Montant = 1062.0
+OUTPUT 2017-11-27	09:32:00.569	Oprération	Quel numéro de compte voulez vous voir ? 
+PROGRAM 2017-11-27	09:32:01.583	Oprération	Récupération des données client
+OUTPUT 2017-11-27	09:32:01.584	Client	Vous n'avez aucun crédit en cours
+INPUT 2017-11-27	09:32:01.585	Oprération	Numéro compte = 0
+OUTPUT 2017-11-27	09:32:15.492	Oprération	Entrez votre Prénom : 
+OUTPUT 2017-11-27	09:32:19.732	Oprération	Entrez votre Nom : 
+OUTPUT 2017-11-27	09:32:22.594	Oprération	Entrez votre Age : 
+OUTPUT 2017-11-27	09:32:23.921	Oprération	Entrez un premier dépot d'argent (>0) : 
+PROGRAM 2017-11-27	09:32:27.927	Oprération	Attribution du numéro de compte
+PROGRAM 2017-11-27	09:32:27.927	Oprération	Création du client
+PROGRAM 2017-11-27	09:32:27.928	Oprération	Ajout du client à la banque
+OUTPUT 2017-11-27	09:32:27.930	Oprération	Merci d'avoir créé un compte Mr.SOLTANA Mehdi
+Votre Numero de comtpe est le : 1
+Il y a pour l'instant 1000.0€
+
+INPUT 2017-11-27	09:32:27.930	Oprération	Prénom = Mehdi Nom = Soltana Age = 20 Premier dépot = 1000.0
+OUTPUT 2017-11-27	09:32:31.971	Oprération	Sur quel numero de compte voulez vous rembourser un crédit
+OUTPUT 2017-11-27	09:32:47.409	Oprération	Veuiller entrer le numero de credit à rembourser (0 pour le premier et 1 pour le second)
+OUTPUT 2017-11-27	09:33:17.508	Oprération	Entrez votre Prénom : 
+OUTPUT 2017-11-27	09:33:19.490	Oprération	Entrez votre Nom : 
+OUTPUT 2017-11-27	09:33:20.124	Oprération	Entrez votre Age : 
+OUTPUT 2017-11-27	09:33:21.308	Oprération	Entrez un premier dépot d'argent (>0) : 
+PROGRAM 2017-11-27	09:33:22.773	Oprération	Attribution du numéro de compte
+PROGRAM 2017-11-27	09:33:22.775	Oprération	Création du client
+PROGRAM 2017-11-27	09:33:22.776	Oprération	Ajout du client à la banque
+OUTPUT 2017-11-27	09:33:22.778	Oprération	Merci d'avoir créé un compte Mr.F Jo
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+INPUT 2017-11-27	09:33:22.778	Oprération	Prénom = Jo Nom = F Age = 20 Premier dépot = 1000.0
+OUTPUT 2017-11-27	09:33:25.756	Oprération	Veuillez selectioner un compte pour faire un crédit
+ Numero de compte :
+PROGRAM 2017-11-27	09:33:27.383	Oprération	Récupération infos client
+OUTPUT 2017-11-27	09:33:27.383	Oprération	Veuillez entrer le nom du crédit :
+OUTPUT 2017-11-27	09:33:28.799	Oprération	Veuillez entrer un taux : 
+OUTPUT 2017-11-27	09:33:31.027	Oprération	Veuillez entrer une durée :
+OUTPUT 2017-11-27	09:33:32.730	Oprération	De combien voullez vous avoir un crédit : 
+PROGRAM 2017-11-27	09:33:33.994	Oprération	Calcul du montant à rembourser et ajout du crédit
+PROGRAM 2017-11-27	09:33:33.995	Oprération	Attribution du crédit demandée
+INPUT 2017-11-27	09:33:33.996	Oprération	Choix compte = 0 Nom crédit = FR Taux = 1.2 Durée = 10 Montant = 1000.0
+OUTPUT 2017-11-27	09:33:36.584	Oprération	Sur quel compte voulez voir votre historique ?
+PROGRAM 2017-11-27	09:33:38.832	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:33:38.832	Oprération	Bonjour Mr.F  Jo
+Vous avez : 2000.0€ sur votre compte
+
+INPUT 2017-11-27	09:33:38.834	Oprération	Compte selectionné = 0
+OUTPUT 2017-11-27	09:33:42.082	Oprération	Sur quel numero de compte voulez vous rembourser un crédit
+OUTPUT 2017-11-27	09:33:43.287	Oprération	Veuiller entrer le numero de credit à rembourser (0 pour le premier et 1 pour le second)
+PROGRAM 2017-11-27	09:33:44.234	Oprération	Récupération des données client
+PROGRAM 2017-11-27	09:33:44.235	Oprération	Veuillez entrer le montant que vous voulez rembourser :
+OUTPUT 2017-11-27	09:33:50.053	Credit	Crédit fini
+PROGRAM 2017-11-27	09:33:50.054	Oprération	SUPPRESION DU CREDIT
+INPUT 2017-11-27	09:33:50.055	Oprération	Numéro compte = 0 Numéro crédit = 0 Montant = 1062.0
+OUTPUT 2017-11-27	09:33:52.620	Oprération	Sur quel compte voulez voir votre historique ?
+PROGRAM 2017-11-27	09:33:55.105	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:33:55.106	Oprération	Bonjour Mr.F  Jo
+Vous avez : 2000.0€ sur votre compte
+
+INPUT 2017-11-27	09:33:55.107	Oprération	Compte selectionné = 0
+OUTPUT 2017-11-27	09:36:15.725	Oprération	Entrez votre Prénom : 
+OUTPUT 2017-11-27	09:36:17.486	Oprération	Entrez votre Nom : 
+OUTPUT 2017-11-27	09:36:19.584	Oprération	Entrez votre Age : 
+OUTPUT 2017-11-27	09:36:20.870	Oprération	Entrez un premier dépot d'argent (>0) : 
+PROGRAM 2017-11-27	09:36:22.868	Oprération	Attribution du numéro de compte
+PROGRAM 2017-11-27	09:36:22.870	Oprération	Création du client
+PROGRAM 2017-11-27	09:36:22.871	Oprération	Ajout du client à la banque
+OUTPUT 2017-11-27	09:36:22.873	Oprération	Merci d'avoir créé un compte Mr.FRANCESCHINI Joffrey
+Votre Numero de comtpe est le : 0
+Il y a pour l'instant 1000.0€
+
+INPUT 2017-11-27	09:36:22.874	Oprération	Prénom = Joffrey Nom = Franceschini Age = 20 Premier dépot = 1000.0
+OUTPUT 2017-11-27	09:36:26.259	Oprération	Veuillez selectioner un compte pour faire un crédit
+ Numero de compte :
+PROGRAM 2017-11-27	09:36:27.433	Oprération	Récupération infos client
+OUTPUT 2017-11-27	09:36:27.434	Oprération	Veuillez entrer le nom du crédit :
+OUTPUT 2017-11-27	09:36:32.985	Oprération	Veuillez entrer un taux : 
+OUTPUT 2017-11-27	09:36:35.277	Oprération	Veuillez entrer une durée :
+OUTPUT 2017-11-27	09:36:37.050	Oprération	De combien voullez vous avoir un crédit : 
+PROGRAM 2017-11-27	09:36:38.843	Oprération	Calcul du montant à rembourser et ajout du crédit
+PROGRAM 2017-11-27	09:36:38.843	Oprération	Attribution du crédit demandée
+INPUT 2017-11-27	09:36:38.844	Oprération	Choix compte = 0 Nom crédit = FR Taux = 1.2 Durée = 10 Montant = 1000.0
+OUTPUT 2017-11-27	09:36:40.979	Oprération	Sur quel compte voulez voir votre historique ?
+PROGRAM 2017-11-27	09:36:42.415	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:36:42.416	Oprération	Bonjour Mr.Franceschini  Joffrey
+Vous avez : 2000.0€ sur votre compte
+
+INPUT 2017-11-27	09:36:42.417	Oprération	Compte selectionné = 0
+OUTPUT 2017-11-27	09:36:44.797	Oprération	Sur quel numero de compte voulez vous rembourser un crédit
+OUTPUT 2017-11-27	09:36:46.020	Oprération	Veuiller entrer le numero de credit à rembourser (0 pour le premier et 1 pour le second)
+PROGRAM 2017-11-27	09:36:47.982	Oprération	Récupération des données client
+PROGRAM 2017-11-27	09:36:47.983	Oprération	Veuillez entrer le montant que vous voulez rembourser :
+OUTPUT 2017-11-27	09:36:57.787	Credit	Crédit fini
+PROGRAM 2017-11-27	09:36:57.788	Oprération	SUPPRESION DU CREDIT
+INPUT 2017-11-27	09:36:57.789	Oprération	Numéro compte = 0 Numéro crédit = 0 Montant = 1062.0
+OUTPUT 2017-11-27	09:37:04.499	Oprération	Sur quel compte voulez voir votre historique ?
+PROGRAM 2017-11-27	09:37:05.697	Oprération	Récupération du client
+OUTPUT 2017-11-27	09:37:05.697	Oprération	Bonjour Mr.Franceschini  Joffrey
+Vous avez : 938.0€ sur votre compte
+
+INPUT 2017-11-27	09:37:05.698	Oprération	Compte selectionné = 0

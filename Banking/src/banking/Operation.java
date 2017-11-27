@@ -152,6 +152,7 @@ public class Operation{
     logger.info("PROGRAM","Récupération des données client");
     logger.info("PROGRAM","Veuillez entrer le montant que vous voulez rembourser :");
     montant = scanner.nextDouble();
+    client.setSolde(-montant);
     if(credit.remboursement(montant)){
       credit = client.remonvecredit(numero_credit);
       logger.info("PROGRAM","SUPPRESION DU CREDIT");
