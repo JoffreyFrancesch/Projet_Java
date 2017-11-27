@@ -67,17 +67,134 @@ Organisation des fichiers :
 Informations sur le Logger :
 ----------------------------
 
-//TODO
+Le logger du projet reprend essentiellement le logger du TP sur le guessgame, il fonctionne de la même manière. Nous l'utilisons dans pour écrire dans le fichier des logs et dans le terminal directement.
+
+La syntaxe sur la console est dans le fichier est différente, dans le terminal nous écrivons juste par exemple :
+
+  `OUTPUT Veuillez entrer un montant`
+
+  `INPUT Montant rentré = 100`
+
+  `PROGRAM Récupération des infos clients`
+
+  La syntaxe dans le fichier log est différente par exemple nous avons :
+
+  `OUTPUT 2017-11-23	16:03:32.646	Veuillez entrer un montant`
+
+  `INPUT 2017-11-23	16:03:32.646	Oprération	Montant rentré = 100`
+
+  `PROGRAM 2017-11-23	16:03:32.646	Oprération	Récupération des infos clients`
+
+Nous avons choisi de faire ainsi pour éclairscire l'affichage en terminal. Cet affichage ce dans le fichier __LoggerFactory.java__ où nous contrôlons la création des deux logger. Grâce au code ci-dessous.
+
+```java
+public class LoggerFactory  {
+	public static Logger getLogger(String name){
+		return new CompositeLogger(name, new ConsoleLogger(), new ContextualLogger(new FileLogger("log.txt"),name));
+	}
+}
+```
+
 
 Informations sur le TestFrameWork :
 -----------------------------------
 
-//TODO
+Dans cette partie nous testons nos deux méthodes de retrait et dépôt en utilisant le try/catch pour récupérer les erreurs s'il y en a.
+
+```java
+Client client = new Client("Arnaud","Dupont",26,10,0,0);
+//Client Arnaud Dupont 26 ans 10€ sur le compte Numero de compte 0 et Nb de Crédit 0
+  try{//test méthode de dépot
+    client.depot(10);//sans erreur
+  } catch (Error e){
+    //traitement de l'erreur
+  }
+
+  try {
+    client.depot(-10);//avec erreur   
+  } catch(Error e) {
+    //traitement de l'erreur
+  }
+```
+
+Nous faisons pareil pour la méthode retrait :
+
+  ```java
+Client client = new Client("Arnaud","Dupont",26,10,0,0);
+  //Client Arnaud Dupont 26 ans 10€ sur le compte Numero de compte 0 et Nb de Crédit 0
+  try{
+    client.retrait(5);//sans erreur
+  } catch (Error e) {
+    //traitement de l'erreur
+  }
+
+  try{
+    client.retrait(50);//avec erreur car 10€ sur le compte
+  } catch (Error e) {
+    //traitement de l'erreur
+  }
+  ```
 
 Informations sur le Banking :
 -----------------------------
 
-//TODO
+La partie Banking respecte les critères demandés.
+
+Un client contient plusieurs informations tel que :
+  - Son prénom
+  - Son nom
+  - Son age
+  - Son solde
+  - Son numero de compte
+  - Son nombre de credit
+  - Sa liste des crédits
+
+  ```java
+  public class Client{
+      private final String prenom;
+      private final String nom;
+      private final int age;
+      private double solde;
+      private final int numero_compte;
+      private int nb_credit;
+      private List<Credit> creditList = new ArrayList<Credit>();
+
+    //méthodes...
+  }
+  ```
+
+  Un crédit contient plusieurs informations tel que :
+  - Son taux
+  - Sa durée
+  - Son montant à rembourser (incluant les mensualtées)
+  - Le montant qui à été remboursé
+  - Le nom du Crédit
+  - Le numero du Crédit
+
+  ```java
+  public class Credit{
+      public double taux;
+      public int duree;
+      public double montant_a_rembourse;
+      public double montant_en_cours_rembourse;
+      public String nom_credit;
+      public int numero_credit;
+
+  //méthodes...
+  }
+  ```
+
+  La banque contient toute les informations précédentes grâce à une liste chainée qui prend toute les informations du client et des crédits du client.
+
+  ```java
+  public class Banque{
+    LinkedList<Client> clientList = new LinkedList<>();
+
+  //méthodes...
+  }
+  ```
+
+
 
 TODO LIST :
 -----------
@@ -90,7 +207,7 @@ TODO LIST :
   - [x] Historique du compte
   - [x] Demande crédit
   - [x] Historique de crédit
-  - [ ] Remboursement crédit
+  - [x] Remboursement crédit
   - [x] Quitter
 
 * Partie Logger :
@@ -104,4 +221,5 @@ TODO LIST :
 
 
 * Partie TestFrameWork :
-ALL...
+  - [ ] test sur depot
+  - [ ] test sur retrait
